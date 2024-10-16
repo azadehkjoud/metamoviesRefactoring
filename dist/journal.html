@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/journal.3baf8fdf.js" defer=""></script>
+    <link href="/index.3a01df49.css" rel="stylesheet">
+
+    <title>Meta Movie</title>
+  </head>
+  <!-- Some color ideas: 
+Teal (Base Color): #6DC8C8
+Light Aqua: #6DE1E1 
+Mint Green: #6DC89B 
+Sky Blue: #6DAFC8 
+Soft Coral: #C86D6D 
+Warm Yellow: #C8C86D 
+Soft Lavender: #C86DC8 
+Light Teal: #A9E5E5
+Dark Teal: #44A3A3
+Deep Teal: #2F7373
+Off White: #F5F5F5 
+Light Gray: #E1E1E1 
+Charcoal: #333333 
+ -->
+
+  <body class="bg-[#6DAFC8]">
+    <header id="header" class="container mx-auto border-gray-300 bg-[#6DE1E1]">
+      <nav id="navbar" class="container mx-auto flex flex-wrap items-center justify-between p-4">
+        <!-- Logo Section -->
+        <div id="logo" class="w-full lg:w-auto flex justify-center lg:justify-start mb-4 lg:mb-0">
+        <a href="/index.html">
+          <img class="h-12 w-auto" src="/logo-no-background.822ee5c3.png" alt="logo">
+        </a>
+        </div>
+
+        <!-- Toggle Button for Mobile Navbar -->
+    <button id="navbar-toggle" class="lg:hidden flex items-center justify-center focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+        <!-- Links Section (Home, Journal, About Us) -->
+        <ul id="navbar-links" class="hidden lg:flex lg:space-x-8 w-full lg:w-auto flex-col lg:flex-row items-center text-center">
+          <li class="w-full lg:w-auto">
+            <a href="/index.html" class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+              Home
+            </a>
+          </li>
+          <li class="w-full lg:w-auto">
+            <a href="/journal.html" class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+              Journal
+            </a>
+          </li>
+          <li class="w-full lg:w-auto">
+            <a href="#" class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+              About Us
+            </a>
+          </li>
+        </ul>
+
+        <!-- Search Bar Section -->
+        <div id="search-bar" class="w-full lg:w-auto mt-2 lg:mt-0">
+          <input id="search-movie" type="text" placeholder="Search movies..." class="border border-gray-300 p-2 rounded-md w-full lg:w-64">
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="hero"></section>
+
+      <div id="favorites-container" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+      <!-- Favorite Movies will be inserted here -->
+    </div>
+
+      <script src="/journal.3baf8fdf.js"></script>
+    </main>
+    <footer id="footer" class="text-blue-600 body-font">
+      <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+  <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+  <img src="/logo-no-background.822ee5c3.png" alt="Movie Diary Logo" class="w-50 h-auto"> 
+      </a>
+      <p class="mt-2 text-sm text-gray-500">Your Cinematic Universe Awaits</p>
+      </div>
+      
+  
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+      <nav class="list-none mb-10">
+  <li><a class="text-gray-600 hover:text-gray-800">Action</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Anime</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Drama</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Science Fiction</a></li>
+  </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+      <nav class="list-none mb-10">
+  <li><a class="text-gray-600 hover:text-gray-800">TV Shows</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Documentaries</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Coming Soon</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">News</a></li>
+      </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">ABOUT US</h2>
+      <nav class="list-none mb-10">
+  <li><a class="text-gray-600 hover:text-gray-800">Who We Are</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Privacy Policy</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Contact Us</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Mobile App</a></li>
+      </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">YOUR ACCOUNT</h2>
+      <nav class="list-none mb-10">
+  <li><a class="text-gray-600 hover:text-gray-800">Sign In</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Favorites</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Settings</a></li>
+      <li><a class="text-gray-600 hover:text-gray-800">Customer Support</a></li>
+      </nav>
+      </div>
+      </div>
+      </div>
+  
+  <div class="bg-[#6DAFC8]"> 
+  <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+  <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 Meta Movie - All Rights Reserved.</p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+      <a class="text-gray-500">
+      <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+      <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+      </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+      </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+      <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewbox="0 0 24 24">
+      <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+      </svg>
+      </a>
+      </span>
+      </div>
+  </div>
+      </footer>
+  <script src="/journal.946edfe5.js"></script></body>
+</html>
