@@ -22,10 +22,16 @@ document
 // Fetch popular movies on load
 document.addEventListener("DOMContentLoaded", fetchPopularMovies);
 
+// added console log for easy debugging
 function fetchPopularMovies() {
+    console.log("Fetching popular movies...");
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
-      .then((response) => response.json())
+      .then((response) => {
+        console.log("Response received:", response);
+        return response.json();
+      })
       .then((data) => {
+        console.log("Data fetched:", data);
         allMoviesData = data.results; 
         displayMovies(allMoviesData); 
       })
@@ -33,9 +39,19 @@ function fetchPopularMovies() {
   }
 
   function displayMovies(movies) {
+    if (!movies || movies.length === 0) {
+      console.warn("No movies found!");
+      return;
+    }
+    
     moviesContainer.innerHTML = ""; // Clear previous movies
     
     movies.forEach((movie) => {
+      if (!movie || !movie.poster_path || !movie.title || !movie.release_date) {
+        console.warn("Movie data is missing!");
+        return;
+      }
+      
       const movieCard = `
         <div class="bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="w-full h-auto object-cover rounded-t-lg">
@@ -49,6 +65,7 @@ function fetchPopularMovies() {
       moviesContainer.innerHTML += movieCard;
     });
   }
+
 
   // Add to favorites
 function addToFavorites(movieId) {

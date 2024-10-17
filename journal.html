@@ -4,27 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="journal.js" defer></script>
+    <script src="src/journal.html" type="module" defer></script>
     <link href="style.css" rel="stylesheet" />
 
     <title>Meta Movie</title>
   </head>
-  <!-- Some color ideas: 
-Teal (Base Color): #6DC8C8
-Light Aqua: #6DE1E1 
-Mint Green: #6DC89B 
-Sky Blue: #6DAFC8 
-Soft Coral: #C86D6D 
-Warm Yellow: #C8C86D 
-Soft Lavender: #C86DC8 
-Light Teal: #A9E5E5
-Dark Teal: #44A3A3
-Deep Teal: #2F7373
-Off White: #F5F5F5 
-Light Gray: #E1E1E1 
-Charcoal: #333333 
- -->
-
+  
   <body class="bg-[#6DAFC8]">
     <header id="header" class="container mx-auto border-gray-300 bg-[#6DE1E1]">
       <nav
@@ -67,7 +52,7 @@ Charcoal: #333333
           </li>
           <li class="w-full lg:w-auto">
             <a
-              href="journal.html"
+              href="/src/journal.html" type="module"
               class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300"
             >
               Journal
@@ -105,7 +90,7 @@ Charcoal: #333333
       <!-- Favorite Movies will be inserted here -->
     </div>
 
-      <script src="journal.js"></script>
+      <script src="journal.js"></script> 
     </main>
     <footer id="footer" class="text-blue-600 body-font">
       <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
@@ -115,8 +100,7 @@ Charcoal: #333333
       alt="Movie Diary Logo" 
       class="w-50 h-auto"> 
       </a>
-      <p class="mt-2 text-sm text-gray-500">Your Cinematic Universe Awaits</p>
-      </div>
+        </div>
       
   
       <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">

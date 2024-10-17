@@ -7,7 +7,7 @@
     "tailwindcss": "^3.4.14"
   },
   "name": "movie-diary-main",
-  "source": "index.html",
+  "source": ["index.html", "src/journal.html"],
   "scripts": {
     "dev": "parcel",
     "build": "parcel build"
