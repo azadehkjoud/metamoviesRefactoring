@@ -12,7 +12,6 @@
     "dev": "parcel",
     "build": "parcel build"
   },
-  
   "dependencies": {
     "leaflet": "^1.9.4"
   }
