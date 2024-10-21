@@ -1,6 +1,4 @@
 // Import necessary dependencies
-import { getMovies } from './api'; // to import API 
-import './styles.css'; // TailwindCSS styles
 
 const apiKey = "146c2867b133120789aa9d2e0de77730";
 const moviesContainer = document.getElementById("movies-container");

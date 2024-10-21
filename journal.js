@@ -1,5 +1,4 @@
 // Import necessary dependencies
-import './styles.css'; // TailwindCSS styles
 
 const favoritesContainer = document.getElementById('favorites-container');
 
