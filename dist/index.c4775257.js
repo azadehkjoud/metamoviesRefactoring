@@ -81,10 +81,7 @@ async function addToFavorites(movieId) {
 // Search movies function
 function searchMovies(movies) {
     const input = document.querySelector("#search-movie").value.toLowerCase();
-<<<<<<< HEAD
-=======
     console.log("Searching for movies starting with:", input);
->>>>>>> origin/main
     // Filter movies where titles start with the search input
     const filteredMovies = movies.filter((movie)=>movie.title.toLowerCase().startsWith(input));
     // If movies are found, display them; otherwise, show an alert
@@ -94,17 +91,12 @@ function searchMovies(movies) {
         document.getElementById("movies-container").scrollIntoView({
             behavior: "smooth"
         });
-<<<<<<< HEAD
-    } else // Show an alert if no movies are found
-    alert(`No movies found starting with "${input}".`);
-=======
         console.log("Filtered movies displayed.");
     } else {
         // Show an alert if no movies are found
         alert(`No movies found starting with "${input}".`);
         console.log(`No movies found starting with "${input}".`);
     }
->>>>>>> origin/main
 }
 
 //# sourceMappingURL=index.c4775257.js.map
