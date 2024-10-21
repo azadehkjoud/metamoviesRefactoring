@@ -50,33 +50,40 @@ function displayFavorites() {
 
 // Save notes to localStorage
 function saveNotes(movieId) {
-  const note = document.getElementById(`note-${movieId}`).value;
-  let favorites = JSON.parse(localStorage.getItem("favorites"));
-
-  favorites = favorites.map((movie) => {
-    if (movie.id === movieId) {
-      movie.note = note; // Add note to the movie object
-    }
-    return movie;
-  });
-
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-  alert("Note saved!");
-}
+    const note = document.getElementById(`note-${movieId}`).value;
+    console.log("Saving note for movie ID:", movieId, "Note:", note);
+  
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    
+    // Update the note for the specific movie
+    favorites = favorites.map(movie => {
+      if (movie.id == movieId) {
+        movie.note = note; // Add or update the note
+      }
+      return movie;
+    });
+  
+    // Save the updated favorites list to localStorage
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  
+    alert("Note saved!");
+  }
+  
 
 // Made a little bit shorter
 function removeFromFavorites(movieId) {
-  // Retrieve and update favorites in one step
-  const updatedFavorites = (
-    JSON.parse(localStorage.getItem("favorites")) || []
-  ).filter((movie) => movie.id !== movieId);
-
-  // Update the localStorage with the updated favorites list
-  localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-
-  // Re-render the favorites list
-  renderFavorites();
-}
+    console.log("Removing movie with ID:", movieId);
+    // Retrieve and update favorites in one step
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    favorites = favorites.filter(movie => movie.id != movieId);
+  
+    // Update the localStorage with the updated favorites list
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  
+    // Re-render the favorites list
+    displayFavorites();
+  }
+  
 
 
 
