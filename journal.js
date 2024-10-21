@@ -11,32 +11,33 @@ document.getElementById("navbar-toggle").addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", displayFavorites);
 
 function displayFavorites() {
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  favoritesContainer.innerHTML = ""; // Clear the container
-
-  favorites.forEach((movie) => {
-    const movieCard = `
-            <div class="bg-white rounded shadow-md p-4">
-                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="w-full">
-                <h3 class="text-xl font-bold mt-2">${movie.title}</h3>
-                <p>${movie.release_date}</p>
-                <textarea id="note-${movie.id}" placeholder="Add notes..." class="border p-2 w-full"></textarea>
-                <button onclick="saveNotes(${movie.id})" class="bg-[#6DC8C8] text-white p-2 mt-2">Save Notes</button>
-<button class="remove-from-favorites bg-red-500 text-white p-2 mt-2" data-movie-id="${movie.id}">Remove from Favorites</button>
-            </div>
-        `;
-    favoritesContainer.innerHTML += movieCard;
-  });
-
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    favoritesContainer.innerHTML = ""; // Clear the container
   
-  const removeFromFavoritesButtons = document.querySelectorAll(".remove-from-favorites");
-removeFromFavoritesButtons.forEach(button => {
-  button.addEventListener("click", function() {
-    const movieId = this.getAttribute("data-movie-id");
-    removeFromFavorites(movieId);
-  });
-});
-}
+    favorites.forEach((movie) => {
+      const movieCard = `
+              <div class="bg-white rounded shadow-md p-4">
+                  <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="w-full">
+                  <h3 class="text-xl font-bold mt-2">${movie.title}</h3>
+                  <p>${movie.release_date}</p>
+                  <textarea id="note-${movie.id}" placeholder="Add notes..." class="border p-2 w-full">${movie.note || ''}</textarea>
+                  <button onclick="saveNotes(${movie.id})" class="bg-[#6DC8C8] text-white p-2 mt-2">Save Notes</button>
+                  <button class="remove-from-favorites bg-red-500 text-white p-2 mt-2" data-movie-id="${movie.id}">Remove from Favorites</button>
+              </div>
+          `;
+      favoritesContainer.innerHTML += movieCard;
+    });
+  
+    // Attach event listeners to remove buttons after the HTML is rendered
+    const removeFromFavoritesButtons = document.querySelectorAll(".remove-from-favorites");
+    removeFromFavoritesButtons.forEach(button => {
+      button.addEventListener("click", function() {
+        const movieId = this.getAttribute("data-movie-id");
+        removeFromFavorites(movieId);
+      });
+    });
+  }
+  
 
 // Save notes to localStorage
 function saveNotes(movieId) {
