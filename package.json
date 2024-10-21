@@ -8,7 +8,8 @@
   },
   "name": "movie-diary-main",
   "scripts": {
-    "dev": "parcel index.html journal.html"
+    "dev":"parcel index.html journal.html",
+    "build":"parcel build index.html journal.html"
   },
   "dependencies": {
     "leaflet": "^1.9.4"
