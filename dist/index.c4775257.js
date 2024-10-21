@@ -1,3 +1,4 @@
+// Import necessary dependencies
 const apiKey = "146c2867b133120789aa9d2e0de77730";
 const moviesContainer = document.getElementById("movies-container");
 const toggleButton = document.getElementById("navbar-toggle");
@@ -34,9 +35,11 @@ function displayMovies(movies) {
         moviesContainer.innerHTML += movieCard;
     });
 }
-// Add to favorites
-function addToFavorites(movieId) {
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`).then((response)=>response.json()).then((movie)=>{
+// Used async/await instead of .then/catch
+async function addToFavorites(movieId) {
+    try {
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
+        const movie = await response.json();
         let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
         // Check if the movie is already in the favorites
         const movieExists = favorites.some((favMovie)=>favMovie.id === movie.id);
@@ -45,7 +48,9 @@ function addToFavorites(movieId) {
             localStorage.setItem("favorites", JSON.stringify(favorites));
             alert(`${movie.title} added to favorites!`);
         } else alert(`${movie.title} is already in your favorites!`);
-    }).catch((error)=>console.error("Error fetching movie:", error));
+    } catch (error) {
+        console.error("Error fetching movie:", error);
+    }
 }
 function searchMovies(movies) {
     const input = document.querySelector("#search-movie").value.toLowerCase();
