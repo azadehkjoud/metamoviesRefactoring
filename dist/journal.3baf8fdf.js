@@ -1,3 +1,4 @@
+// Import necessary dependencies
 const favoritesContainer = document.getElementById("favorites-container");
 document.getElementById("navbar-toggle").addEventListener("click", function() {
     const navbarLinks = document.getElementById("navbar-links");
@@ -33,15 +34,14 @@ function saveNotes(movieId) {
     localStorage.setItem("favorites", JSON.stringify(favorites));
     alert("Note saved!");
 }
+// Made a little bit shorter
 function removeFromFavorites(movieId) {
-    // Get the favorites from localStorage
-    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    // Filter out the movie to be removed
-    favorites = favorites.filter((movie)=>movie.id !== movieId);
+    // Retrieve and update favorites in one step
+    const updatedFavorites = (JSON.parse(localStorage.getItem("favorites")) || []).filter((movie)=>movie.id !== movieId);
     // Update the localStorage with the updated favorites list
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-    // Re-render the favorites list or remove the movie card from the DOM
-    renderFavorites(); // Assuming you have a function to re-render the favorites list
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    // Re-render the favorites list
+    renderFavorites();
 }
 function renderFavorites() {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
