@@ -1,69 +1,81 @@
 // Import necessary dependencies
 
-const favoritesContainer = document.getElementById('favorites-container');
+const favoritesContainer = document.getElementById("favorites-container");
 
-document.getElementById('navbar-toggle').addEventListener('click', function () {
-    const navbarLinks = document.getElementById('navbar-links');
-    navbarLinks.classList.toggle('hidden');
-  });
+document.getElementById("navbar-toggle").addEventListener("click", function () {
+  const navbarLinks = document.getElementById("navbar-links");
+  navbarLinks.classList.toggle("hidden");
+});
 
 // Fetch favorites from localStorage on load
-document.addEventListener('DOMContentLoaded', displayFavorites);
+document.addEventListener("DOMContentLoaded", displayFavorites);
 
 function displayFavorites() {
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    favoritesContainer.innerHTML = ''; // Clear the container
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  favoritesContainer.innerHTML = ""; // Clear the container
 
-    favorites.forEach(movie => {
-        const movieCard = `
+  favorites.forEach((movie) => {
+    const movieCard = `
             <div class="bg-white rounded shadow-md p-4">
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="w-full">
                 <h3 class="text-xl font-bold mt-2">${movie.title}</h3>
                 <p>${movie.release_date}</p>
                 <textarea id="note-${movie.id}" placeholder="Add notes..." class="border p-2 w-full"></textarea>
                 <button onclick="saveNotes(${movie.id})" class="bg-[#6DC8C8] text-white p-2 mt-2">Save Notes</button>
-                <button onclick="removeFromFavorites(${movie.id})" class="bg-red-500 text-white p-2 mt-2">Remove from Favorites</button>
+                <button class="removeFromFavorites(${movie.id})" class="bg-red-500 text-white p-2 mt-2">Remove from Favorites</button>
             </div>
         `;
-        favoritesContainer.innerHTML += movieCard;
-    });
+    favoritesContainer.innerHTML += movieCard;
+  });
 }
 
 // Save notes to localStorage
 function saveNotes(movieId) {
-    const note = document.getElementById(`note-${movieId}`).value;
-    let favorites = JSON.parse(localStorage.getItem('favorites'));
+  const note = document.getElementById(`note-${movieId}`).value;
+  let favorites = JSON.parse(localStorage.getItem("favorites"));
 
-    favorites = favorites.map(movie => {
-        if (movie.id === movieId) {
-            movie.note = note; // Add note to the movie object
-        }
-        return movie;
-    });
+  favorites = favorites.map((movie) => {
+    if (movie.id === movieId) {
+      movie.note = note; // Add note to the movie object
+    }
+    return movie;
+  });
 
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    alert('Note saved!');
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+  alert("Note saved!");
 }
 
 // Made a little bit shorter
 function removeFromFavorites(movieId) {
-    // Retrieve and update favorites in one step
-    const updatedFavorites = (JSON.parse(localStorage.getItem('favorites')) || []).filter(movie => movie.id !== movieId);
+  // Retrieve and update favorites in one step
+  const updatedFavorites = (
+    JSON.parse(localStorage.getItem("favorites")) || []
+  ).filter((movie) => movie.id !== movieId);
 
-    // Update the localStorage with the updated favorites list
-    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  // Update the localStorage with the updated favorites list
+  localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
 
-    // Re-render the favorites list
-    renderFavorites();
+  // Re-render the favorites list
+  renderFavorites();
 }
 
+// Add event listeners for all Add to Favorites buttons
+const removeFromFavoritesButtons = document.querySelectorAll(
+  ".removeFromFavorites"
+);
+removeFromFavoritesButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const movieId = this.getAttribute("data-movie-id");
+    removeFromFavorites(movieId);
+  });
+});
 
 function renderFavorites() {
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    favoritesContainer.innerHTML = ''; // Clear the current list
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  favoritesContainer.innerHTML = ""; // Clear the current list
 
-    favorites.forEach(movie => {
-        const movieCard = `
+  favorites.forEach((movie) => {
+    const movieCard = `
             <div class="bg-white rounded shadow-md p-4">
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="w-full">
                 <h3 class="text-xl font-bold mt-2">${movie.title}</h3>
@@ -73,6 +85,6 @@ function renderFavorites() {
                 <button onclick="removeFromFavorites(${movie.id})" class="bg-red-500 text-white p-2 mt-2">Remove from Favorites</button>
             </div>
         `;
-        favoritesContainer.innerHTML += movieCard;
-    });
+    favoritesContainer.innerHTML += movieCard;
+  });
 }
