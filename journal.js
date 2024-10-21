@@ -21,19 +21,28 @@ function displayFavorites() {
                   <h3 class="text-xl font-bold mt-2">${movie.title}</h3>
                   <p>${movie.release_date}</p>
                   <textarea id="note-${movie.id}" placeholder="Add notes..." class="border p-2 w-full">${movie.note || ''}</textarea>
-                  <button onclick="saveNotes(${movie.id})" class="bg-[#6DC8C8] text-white p-2 mt-2">Save Notes</button>
+                  <button class="save-notes bg-[#6DC8C8] text-white p-2 mt-2" data-movie-id="${movie.id}">Save Notes</button>
                   <button class="remove-from-favorites bg-red-500 text-white p-2 mt-2" data-movie-id="${movie.id}">Remove from Favorites</button>
               </div>
           `;
       favoritesContainer.innerHTML += movieCard;
     });
   
-    // Attach event listeners to remove buttons after the HTML is rendered
+    // Attach event listeners to Remove buttons
     const removeFromFavoritesButtons = document.querySelectorAll(".remove-from-favorites");
     removeFromFavoritesButtons.forEach(button => {
       button.addEventListener("click", function() {
         const movieId = this.getAttribute("data-movie-id");
         removeFromFavorites(movieId);
+      });
+    });
+  
+    // Attach event listeners to Save Notes buttons
+    const saveNotesButtons = document.querySelectorAll(".save-notes");
+    saveNotesButtons.forEach(button => {
+      button.addEventListener("click", function() {
+        const movieId = this.getAttribute("data-movie-id");
+        saveNotes(movieId);
       });
     });
   }
