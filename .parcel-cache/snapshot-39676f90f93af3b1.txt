@@ -1,14 +1,14 @@
 8378
-68/home/johnblack/wbs/metamoviesRefactoring/dist/index.63aff760.js.map1729509446663092488 0
+68/home/johnblack/wbs/metamoviesRefactoring/dist/index.63aff760.js.map1729509725451169439 0
 78/home/johnblack/wbs/metamoviesRefactoring/dist/logo-no-background.822ee5c3.png1729509446642092505 0
 65/home/johnblack/wbs/metamoviesRefactoring/dist/index.3a01df49.css1729509446644092503 0
 66/home/johnblack/wbs/metamoviesRefactoring/dist/journal.946edfe5.js1729509420699112663 0
 66/home/johnblack/wbs/metamoviesRefactoring/dist/journal.97097fc5.js1729509446642092505 0
 75/home/johnblack/wbs/metamoviesRefactoring/dist/movie-diary-main.3464ddca.js1729509420699112663 0
-68/home/johnblack/wbs/metamoviesRefactoring/dist/index.c4775257.js.map1729509446647092501 0
+68/home/johnblack/wbs/metamoviesRefactoring/dist/index.c4775257.js.map1729509725451169439 0
 70/home/johnblack/wbs/metamoviesRefactoring/dist/journal.3baf8fdf.js.map1729509446663092488 0
 79/home/johnblack/wbs/metamoviesRefactoring/dist/movie-diary-main.3464ddca.js.map1729509420699112663 0
-46/home/johnblack/wbs/metamoviesRefactoring/dist1729509447416091905 1
+46/home/johnblack/wbs/metamoviesRefactoring/dist1729509725451169439 1
 51/home/johnblack/wbs/metamoviesRefactoring/style.css1729253912598330161 0
 71/home/johnblack/wbs/metamoviesRefactoring/images/Hero-image/popcorn.jpg1729088955442375528 0
 77/home/johnblack/wbs/metamoviesRefactoring/images/Hero-image/Clapperboard2.jpg1729088955437375532 0
@@ -2156,7 +2156,7 @@
 94/home/johnblack/wbs/metamoviesRefactoring/node_modules/@parcel/node-resolver-core/lib/index.js1729507981372983799 0
 104/home/johnblack/wbs/metamoviesRefactoring/node_modules/resolve/test/resolver/incorrect_main/package.json1729507986099971728 0
 99/home/johnblack/wbs/metamoviesRefactoring/node_modules/@parcel/optimizer-svgo/node_modules/mdn-data1729507984013977044 1
-54/home/johnblack/wbs/metamoviesRefactoring/journal.html1729498629677620982 0
+54/home/johnblack/wbs/metamoviesRefactoring/journal.html1729510176265259077 0
 82/home/johnblack/wbs/metamoviesRefactoring/node_modules/@lezer/common/dist/index.js1729507981714982923 0
 97/home/johnblack/wbs/metamoviesRefactoring/node_modules/@parcel/packager-js/src/ESMOutputFormat.js1729507981654983076 0
 134/home/johnblack/wbs/metamoviesRefactoring/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/utils/createCustomError.js1729507984104976812 0
@@ -3179,7 +3179,7 @@
 86/home/johnblack/wbs/metamoviesRefactoring/node_modules/domutils/lib/stringify.d.ts.map1729507981899982448 0
 106/home/johnblack/wbs/metamoviesRefactoring/node_modules/@swc/helpers/cjs/_iterable_to_array_limit_loose.cjs1729507988147966523 0
 87/home/johnblack/wbs/metamoviesRefactoring/node_modules/@jridgewell/sourcemap-codec/dist1729507981685982997 1
-52/home/johnblack/wbs/metamoviesRefactoring/index.html1729509420699112663 0
+52/home/johnblack/wbs/metamoviesRefactoring/index.html1729510165565226945 0
 78/home/johnblack/wbs/metamoviesRefactoring/node_modules/css-select/lib/types.js1729507983185979159 0
 107/home/johnblack/wbs/metamoviesRefactoring/node_modules/@parcel/runtime-js/src/helpers/browser/css-loader.js1729507982167981763 0
 80/home/johnblack/wbs/metamoviesRefactoring/node_modules/svgo/plugins/sortAttrs.js1729507986050971852 0
@@ -3424,7 +3424,7 @@
 92/home/johnblack/wbs/metamoviesRefactoring/node_modules/caniuse-lite/data/features/streams.js1729507989794962349 0
 76/home/johnblack/wbs/metamoviesRefactoring/node_modules/semver/internal/re.js1729507983282978911 0
 86/home/johnblack/wbs/metamoviesRefactoring/node_modules/caniuse-lite/data/regions/ZW.js1729507990118961529 0
-49/home/johnblack/wbs/metamoviesRefactoring/main.js1729509719579128924 0
+49/home/johnblack/wbs/metamoviesRefactoring/main.js1729510420740848070 0
 82/home/johnblack/wbs/metamoviesRefactoring/node_modules/mdn-data/css/selectors.json1729507983661977943 0
 104/home/johnblack/wbs/metamoviesRefactoring/node_modules/caniuse-lite/data/features/input-file-multiple.js1729507988452965750 0
 70/home/johnblack/wbs/metamoviesRefactoring/node_modules/semver/index.js1729507982187981711 0
@@ -4995,7 +4995,7 @@
 115/home/johnblack/wbs/metamoviesRefactoring/node_modules/@parcel/optimizer-svgo/node_modules/svgo/lib/svgo/plugins.js1729507984332976230 0
 73/home/johnblack/wbs/metamoviesRefactoring/node_modules/svgo/lib/parser.js1729507984423975998 0
 84/home/johnblack/wbs/metamoviesRefactoring/node_modules/@swc/helpers/esm/_identity.js1729507988472965699 0
-64/home/johnblack/wbs/metamoviesRefactoring/dist/index.c4775257.js1729509446638092508 0
+64/home/johnblack/wbs/metamoviesRefactoring/dist/index.c4775257.js1729509725446169405 0
 88/home/johnblack/wbs/metamoviesRefactoring/node_modules/source-map-js/lib/mapping-list.js1729507981484983512 0
 76/home/johnblack/wbs/metamoviesRefactoring/node_modules/readdirp/package.json1729507981190984265 0
 72/home/johnblack/wbs/metamoviesRefactoring/node_modules/@msgpackr-extract1729507992469955591 1
@@ -7756,7 +7756,7 @@
 89/home/johnblack/wbs/metamoviesRefactoring/node_modules/htmlnano/lib/modules/minifySvg.cjs1729507982469980990 0
 94/home/johnblack/wbs/metamoviesRefactoring/node_modules/htmlnano/lib/modules/removeComments.cjs1729507982703980391 0
 98/home/johnblack/wbs/metamoviesRefactoring/node_modules/htmlnano/lib/modules/collapseWhitespace.mjs1729507985679972797 0
-64/home/johnblack/wbs/metamoviesRefactoring/dist/index.63aff760.js1729509446662092489 0
+64/home/johnblack/wbs/metamoviesRefactoring/dist/index.63aff760.js1729509725446169405 0
 104/home/johnblack/wbs/metamoviesRefactoring/node_modules/htmlnano/lib/modules/normalizeAttributeValues.cjs1729507982585980693 0
 99/home/johnblack/wbs/metamoviesRefactoring/node_modules/supports-preserve-symlinks-flag/package.json1729507981432983645 0
 84/home/johnblack/wbs/metamoviesRefactoring/node_modules/csso/cjs/clean/WhiteSpace.cjs1729507984212976536 0

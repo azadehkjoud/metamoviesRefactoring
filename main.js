@@ -13,13 +13,12 @@ document.getElementById('navbar-toggle').addEventListener('click', function () {
 });
 
 // Search movie event listener
-document.querySelector("#search-movie")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      console.log("Search initiated with input:", document.querySelector("#search-movie").value);
-      searchMovies(allMoviesData);
-    }
-  });
+document.querySelector("#search-movie").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    console.log("Search initiated with input:", document.querySelector("#search-movie").value);
+    searchMovies(allMoviesData);
+  }
+});
 
 // Fetch popular movies on load
 document.addEventListener("DOMContentLoaded", fetchPopularMovies);
@@ -48,11 +47,20 @@ function displayMovies(movies) {
         <div class="mt-4">
           <h3 class="text-lg md:text-xl font-bold">${movie.title}</h3>
           <p class="text-gray-500 text-sm md:text-base">${movie.release_date}</p>
-          <button onclick="addToFavorites(${movie.id})" class="bg-[#6DC8C8] hover:bg-[#5ababa] text-white py-2 px-4 mt-4 block w-full text-center rounded-md">Add to Favorites</button>
+          <button class="add-to-favorites bg-[#6DC8C8] hover:bg-[#5ababa] text-white py-2 px-4 mt-4 block w-full text-center rounded-md" data-movie-id="${movie.id}">Add to Favorites</button>
         </div>
       </div>
     `;
     moviesContainer.innerHTML += movieCard;
+  });
+
+  // Add event listeners for all Add to Favorites buttons
+  const addToFavoritesButtons = document.querySelectorAll(".add-to-favorites");
+  addToFavoritesButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      const movieId = this.getAttribute("data-movie-id");
+      addToFavorites(movieId);
+    });
   });
 }
 
@@ -102,4 +110,5 @@ function searchMovies(movies) {
     console.log(`No movies found starting with "${input}".`);
   }
 }
+
 
