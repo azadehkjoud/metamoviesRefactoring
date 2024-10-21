@@ -7,8 +7,6 @@
     <script src="/index.63aff760.js" defer=""></script>    <!-- added type="module" -->
     <link href="/index.3a01df49.css" rel="stylesheet">
     <!--added link for routing -->
-<a href="/journal.html">Go to Journal</a>
-
 
     <title>Meta Movie</title>
   </head>
@@ -30,66 +28,68 @@ Charcoal: #333333
 
   <body class="bg-[#6DAFC8]">
     <header id="header" class=" border-gray-300 bg-[#6DE1E1] p-4">
-      <nav id="navbar" class="container mx-auto flex flex-wrap items-center justify-between p-">
+      <nav id="navbar" class="container mx-auto flex flex-wrap items-center justify-between p-4">
         <!-- Logo Section -->
         <div id="logo" class="w-full lg:w-auto flex justify-center lg:justify-start mb-4 lg:mb-0">
           <img class="h-12 w-auto" src="/logo-no-background.822ee5c3.png" alt="logo">
         </div>
-
+      
         <!-- Toggle Button for Mobile Navbar -->
-    <button id="navbar-toggle" class="lg:hidden flex items-center justify-center focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-
+        <button id="navbar-toggle" class="lg:hidden flex items-center justify-center focus:outline-none">
+          <svg class="w-6 h-6 text-gray-700 hover:text-blue-600 transition duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      
         <!-- Links Section (Home, Journal, About Us) -->
-        <ul id="navbar-links" class="hidden lg:flex lg:space-x-8 w-full lg:w-auto flex-col lg:flex-row items-center text-center">
+        <ul id="navbar-links" class="hidden lg:flex lg:space-x-8 w-full lg:w-auto flex-col lg:flex-row items-center text-center font-semibold text-gray-700">
           <li class="w-full lg:w-auto">
-            <a href="/index.html" class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+            <a href="/index.html" class="block py-2 px-4 rounded-lg hover:bg-blue-100 focus:bg-blue-200 hover:text-blue-600 focus:text-blue-600 transition duration-300">
               Home
             </a>
           </li>
           <li class="w-full lg:w-auto">
-            <a href="/journal.html" class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+            <a href="/journal.html" class="block py-2 px-4 rounded-lg hover:bg-blue-100 focus:bg-blue-200 hover:text-blue-600 focus:text-blue-600 transition duration-300">
               Journal
             </a>
           </li>
           <li class="w-full lg:w-auto">
-            <a href="#" class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+            <a href="#" class="block py-2 px-4 rounded-lg hover:bg-blue-100 focus:bg-blue-200 hover:text-blue-600 focus:text-blue-600 transition duration-300">
               About Us
             </a>
           </li>
         </ul>
-
-      <!-- Search Bar Section -->
-      <div id="search-bar" class="relative flex w-full lg:w-auto mt-2 lg:mt-0">
-        <input id="search-movie" type="text" placeholder="Search movies..." class="border border-gray-300 p-2 rounded-md w-full lg:w-64">
-
-
-        <!-- Search Results  -->
-        <section id="search-modal" class="absolute hidden bg-white border border-gray-300 rounded-lg shadow-lg w-full lg:w-64 z-50 top-full mt-1 right-0" role="dialog" aria-labelledby="search-results-title" "="">
-  <div class=" p-4">
-          <span class="close-modal cursor-pointer text-gray-500 text-xl float-right">&times;</span>
-          <h2 class="text-lg font-semibold mb-4 text-center">Search Results</h2>
-          <ul id="search-results" class="list-disc pl-5"></ul>
-      </div>
-      </section>
-      </div>
-    </nav>
+      
+        <!-- Search Bar Section -->
+        <div id="search-bar" class="relative flex w-full lg:w-auto mt-2 lg:mt-0">
+          <input id="search-movie" type="text" placeholder="Search movies..." class="border border-gray-300 p-2 pl-10 rounded-md w-full lg:w-64 focus:ring-2 focus:ring-blue-400 focus:outline-none transition duration-300">
+          <svg class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21a9 9 0 110-18 9 9 0 010 18zm7-7l5 5"></path>
+          </svg>
+      
+          <!-- Search Results Modal -->
+          <section id="search-modal" class="absolute hidden bg-white border border-gray-300 rounded-lg shadow-lg w-full lg:w-64 z-50 top-full mt-1 right-0" role="dialog" aria-labelledby="search-results-title">
+            <div class="p-4">
+              <span class="close-modal cursor-pointer text-gray-500 text-xl float-right">&times;</span>
+              <h2 class="text-lg font-semibold mb-4 text-center">Search Results</h2>
+              <ul id="search-results" class="list-disc pl-5"></ul>
+            </div>
+          </section>
+        </div>
+      </nav>      
   </header>
 
   <main id="main-content">
     <section id="hero"></section>
 <!-- Hero Section -->
-<section class="container mx-auto relative bg-cover bg-center h-screen mt-4">
+<section class="container mx-auto relative bg-cover bg-center h-screen mt-4 border-1 border-black rounded-lg p-6">
 <!-- Background Video -->
 <video autoplay="" muted="" loop="" playsinline="" class="absolute inset-0 w-full h-full object-cover">
   <source src="/5651594-uhd_3840_2160_25fps.b14057bb.mp4" type="video/mp4"> <!-- re-linked video -->
 </video>
 
 <!-- Overlay -->
-<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div class="absolute inset-0 bg-black bg-opacity-50 border-1 border-black rounded-lg p-6"></div>
 
 <!-- Hero Content -->
 <div class="container mx-auto flex flex-col items-center justify-center h-full relative z-10 text-center">

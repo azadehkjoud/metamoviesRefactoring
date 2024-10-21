@@ -54,30 +54,17 @@ async function addToFavorites(movieId) {
 }
 function searchMovies(movies) {
     const input = document.querySelector("#search-movie").value.toLowerCase();
-    const allMovies = movies.map((movie)=>movie.title.toLowerCase());
-    const modal = document.getElementById("search-modal");
-    const modalResults = document.getElementById("search-results");
-    const closeModal = document.querySelector(".close-modal");
-    modalResults.innerHTML = "";
-    let found = false;
-    for(let i = 0; i < allMovies.length; i++)if (allMovies[i].includes(input)) {
-        const listItem = document.createElement("li");
-        listItem.textContent = movies[i].title;
-        modalResults.appendChild(listItem);
-        found = true;
-    }
-    if (!found) {
-        const listItem = document.createElement("li");
-        listItem.textContent = "This movie was not found";
-        modalResults.appendChild(listItem);
-    }
-    modal.classList.remove("hidden");
-    closeModal.addEventListener("click", ()=>{
-        modal.classList.add("hidden");
-    });
-    window.addEventListener("click", (e)=>{
-        if (e.target === modal) modal.classList.add("hidden");
-    });
+    // Filter movies where titles start with the search input
+    const filteredMovies = movies.filter((movie)=>movie.title.toLowerCase().startsWith(input));
+    // If movies are found, display them; otherwise, show an alert
+    if (filteredMovies.length > 0) {
+        displayMovies(filteredMovies);
+        // Scroll to the movies section after displaying the search results
+        document.getElementById("movies-container").scrollIntoView({
+            behavior: "smooth"
+        });
+    } else // Show an alert if no movies are found
+    alert(`No movies found starting with "${input}".`);
 }
 
 //# sourceMappingURL=index.c4775257.js.map
